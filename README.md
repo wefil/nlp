@@ -12,7 +12,33 @@ https://textblob.readthedocs.io/en/dev/quickstart.html#part-of-speech-tagging
 
 Text summarization:
 https://www.kaggle.com/code/sandeepbhogaraju/text-summarization-with-seq2seq-model
+Word embeddings and sentence embeddings serve different purposes and are used in different contexts:
 
+Word Embeddings:
+
+Word embeddings represent individual words in a continuous vector space. Each word is mapped to a fixed-size vector, capturing semantic and syntactic information about the word.
+They are commonly used in natural language processing (NLP) tasks such as sentiment analysis, named entity recognition, machine translation, and text classification.
+Word embeddings are useful when you need to analyze or process individual words in isolation, without considering the context of the entire sentence.
+Popular word embedding models include Word2Vec, GloVe (Global Vectors for Word Representation), and FastText.
+Sentence Embeddings:
+
+Sentence embeddings represent entire sentences or paragraphs as fixed-size vectors, capturing the semantic meaning and contextual information of the entire text.
+They are used in applications such as text similarity, document classification, clustering, and semantic search.
+Sentence embeddings are helpful when you need to understand the overall meaning or semantic similarity between sentences or documents.
+Different techniques are used to generate sentence embeddings, including averaging word embeddings, using recurrent neural networks (RNNs), convolutional neural networks (CNNs), or transformer models like BERT and GPT.
+Here are some scenarios where you might choose one over the other:
+
+Word Embeddings:
+
+When you need to perform word-level tasks such as part-of-speech tagging or named entity recognition.
+When you have a large vocabulary and want to efficiently represent individual words.
+When you want to capture word semantics and relationships within a vocabulary.
+Sentence Embeddings:
+
+When you need to understand the overall meaning or semantic similarity between sentences or documents.
+When you want to encode the context of the entire text into a fixed-size vector.
+When you want to compare or cluster entire texts based on their semantic similarity.
+In some cases, you might even use both word and sentence embeddings in combination, such as using pre-trained word embeddings to represent individual words and then aggregating them to generate sentence embeddings for downstream tasks.
 
 Sure, let's break down the pipeline for each of the mentioned NLP tasks in detail:
 
