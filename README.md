@@ -1,6 +1,18 @@
 # nlp
 
 https://www.kaggle.com/code/eneszvo/ner-named-entity-recognition-tutorial
+Spell Checker:
+
+https://norvig.com/spell-correct.html
+
+Text blob:
+
+https://textblob.readthedocs.io/en/dev/quickstart.html#part-of-speech-tagging
+
+
+Text summarization:
+https://www.kaggle.com/code/sandeepbhogaraju/text-summarization-with-seq2seq-model
+
 
 Sure, let's break down the pipeline for each of the mentioned NLP tasks in detail:
 
