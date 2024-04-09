@@ -1,0 +1,62 @@
+nltk.download('punkt')
+nltk.download('averaged_perceptron_tagger')
+
+import nltk
+from nltk.tokenize import word_tokenize
+
+def check_grammar(sentence):
+    try:
+        # Tokenize the sentence
+        words = word_tokenize(sentence)
+
+        # Part-of-speech tagging
+        pos_tags = nltk.pos_tag(words)
+
+        # Checking for grammar errors
+        grammar_errors = [word for word, pos in pos_tags if pos.startswith('V') and word.endswith('ed')]
+
+        if grammar_errors:
+            print("The sentence contains grammatical errors.")
+            print("Suggested correction:", sentence.replace(grammar_errors[0], grammar_errors[0][:-1]))
+        else:
+            print("The sentence is grammatically correct.")
+
+    except Exception as e:
+        print("An error occurred:", e)
+
+def make_positive(sentence):
+    try:
+        # Tokenize the sentence
+        words = word_tokenize(sentence)
+
+        # Define a dictionary of negative words and their positive counterparts
+        neg_to_pos = {
+            "hate": "love",
+            "dislike": "like",
+            "disapprove": "approve",
+            "dissatisfied": "satisfied",
+            "unhappy": "happy",
+            "unpleasant": "pleasant",
+            "unfortunate": "fortunate",
+            "stupid": "smart",
+            "sad": "happy"
+        }
+
+        # Replace negative words with their positive counterparts
+        for i, word in enumerate(words):
+            if word.lower() in neg_to_pos:
+                words[i] = neg_to_pos[word.lower()]
+
+        positive_sentence = ' '.join(words)
+        if positive_sentence != sentence:
+            print("Positive sentence:", positive_sentence)
+        else:
+            print("The sentence is already positive.")
+
+    except Exception as e:
+        print("An error occurred:", e)
+
+# Example usage
+statement = "Very sad"
+check_grammar(statement)
+make_positive(statement)
