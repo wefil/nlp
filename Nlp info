@@ -1,0 +1,71 @@
+Ngrams
+
+N-grams, which are sequences of words or letters, have a variety of applications in the field of natural language processing (NLP). Here are some of the common uses for ngrams:
+
+Language Modeling: N-grams are a foundational element in statistical language models, which predict the likelihood of the next word in a sequence. This is crucial for tasks like machine translation and text generation.
+
+Sentiment Analysis: By analyzing the sequence of words, n-grams can help determine the overall sentiment of a piece of text. This is useful for tasks like analyzing customer reviews or social media posts.
+
+Text Classification: N-grams can be used to categorize text documents into different groups. For instance, emails can be classified as spam or not spam based on the presence of specific word combinations.
+
+Spelling Correction: N-grams can be used to identify misspelled words by comparing them to sequences of words in a large corpus. This helps in suggesting corrections and improving the overall quality of text.
+
+Machine Translation: N-grams are used to translate text from one language to another by considering the order and probability of word sequences in both languages.
+
+Information Retrieval: N-grams can be employed to improve the accuracy of search engines by understanding the relationships between words and phrases in a query.
+
+Text Mining: N-grams are a valuable tool for extracting meaningful patterns and insights from large amounts of textual data
+
+BOW,Tf-IDF and Skipgram
+
+Use BoW for initial exploration, document classification with smaller datasets, or when simplicity is crucial.
+Use TF-IDF when you need to consider word importance within documents and across a corpus for tasks like document similarity and retrieval.
+Use Skipgram or CBOW (Word2Vec) when capturing semantic relationships and word meaning is essential for advanced NLP tasks like machine translation, chatbots, and text analysis.
+
+
+Keyword extraction 
+
+
+Named Entity Recognition (NER) and Part-of-Speech (POS) tagging as features, you can follow these steps:
+Data Preparation:
+Gather a labeled dataset where each input sequence is annotated with keywords/key phrases.
+Each input sequence should also be annotated with NER tags and POS tags.
+Feature Extraction:
+Extract features from the input sequences that include:
+Tokens: Words or subwords in the input sequence.
+NER tags: Named Entity Recognition tags assigned to each token.
+POS tags: Part-of-Speech tags assigned to each token.
+Other relevant features based on the specific task or domain.
+Model Selection:
+Choose a suitable machine learning or deep learning model for keyword/key phrase extraction.
+Commonly used models include Conditional Random Fields (CRFs), Recurrent Neural Networks (RNNs), Bidirectional LSTMs (Long Short-Term Memory networks), Transformers, etc.
+—--------------------------------------------
+Machine Translation
+
+Importing Packages: This section imports necessary libraries such as NumPy, pandas, TensorFlow, Keras, and Matplotlib for data manipulation, modeling, and visualization.
+Loading the Data - English and Tamil: It loads English and Tamil text data from files.
+Text Pre-Processing: It preprocesses the loaded text data by removing punctuation and stripping unnecessary characters.
+Tokenizer and Padding: It defines functions to tokenize and pad the text data, preparing it for input to the neural network model.
+Model Building: It defines a neural network model architecture using Keras Sequential API. The model consists of an Embedding layer, an LSTM layer, and a Dense layer.
+Training the Model: It trains the defined model using the preprocessed data, with specified hyperparameters such as batch size, number of epochs, and optimizer.
+Loss Insights: It visualizes the training and validation loss over epochs to monitor model performance.
+Evaluation and Inference: It evaluates the trained model's accuracy on the training data and performs inference on test data. Inference involves translating Tamil sentences into English using the trained model.
+
+
+Sentence Compression/Summarization
+
+
+https://medium.com/@abhinaya08/data-scientists-guide-to-summarization-dde46b30b4c3
+
+https://drive.usercontent.google.com/download?id=1USoQ8lJgN8kAWnUnRrupMGrPMLlDVqlV&export=download&authuser=0
+
+https://www.topcoder.com/thrive/articles/text-summarization-in-nlp
+
+
+Grammar and more related:
+
+https://colab.research.google.com/drive/1vaPCdmdYojxCCnZQs1r4CC57Lof_GGVj?usp=sharing#scrollTo=6J-FYdx6nFE_
+
+(Muthu and vishwa)
+
+https://notebook.community/bendichter/change_tense/change_tenses
